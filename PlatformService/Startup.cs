@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Name.PlatformService.Data;
+using PlatformService.Data;
 
 namespace PlatformService
 {
@@ -29,7 +29,7 @@ namespace PlatformService
 		public void ConfigureServices(IServiceCollection services)
 		{
 
-			services.AddDbContext<AppDBContext>(option => option.UseInMemoryDatabase("InMem"));
+			services.AddDbContext<AppDbContext>(option => option.UseInMemoryDatabase("InMem"));
 			services.AddControllers();
 			services.AddSwaggerGen(c =>
 			{
