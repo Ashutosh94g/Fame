@@ -29,7 +29,7 @@ namespace PlatformService.Data
 			return _context.Platforms.ToList();
 		}
 
-		public Platform getPlatFormById(int id)
+		public Platform getPlatformById(int id)
 		{
 			return _context.Platforms.FirstOrDefault(p => p.Id == id);
 		}
